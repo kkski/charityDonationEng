@@ -25,7 +25,7 @@
             <li><a href="/" class="btn btn--without-border active">Start</a></li>
             <li><a href="#steps" class="btn btn--without-border">What is this about?</a></li>
             <li><a href="#about-us" class="btn btn--without-border">About us</a></li>
-            <li><a href="#help" class="btn btn--without-border">Foundations and organisations</a></li>
+            <li><a href="#help" class="btn btn--without-border">Organisations</a></li>
             <li><a href="#contact" class="btn btn--without-border">Contact</a></li>
         </ul>
     </nav>
@@ -44,13 +44,14 @@
     <div class="container container--85">
         <div class="stats--item">
             <em>${bagsAmount}</em>
-
             <h3>donated bags</h3>
+            <p></p>
         </div>
 
         <div class="stats--item">
             <em>${donationsAmount}</em>
             <h3>donations</h3>
+            <p></p>
 
         </div>
 
@@ -89,7 +90,7 @@
 <section class="about-us">
     <div class="about-us--text">
         <h2>About us</h2>
-        <p>This is a personal example project, created with help from CodersLab.</p>
+        <p>This is a personal example project, created with template provided.</p>
         <img src="<c:url value="resources/images/signature.svg"/>" class="about-us--text-signature" alt="Signature"/>
     </div>
     <div class="about-us--image"><img src="<c:url value="resources/images/about-us.jpg"/>" alt="People in circle"/>
