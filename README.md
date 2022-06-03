@@ -15,3 +15,5 @@ Known bugs:
 - Checking for existing password while trying to edit profile does not work.
 - Errors after failed login do not display
 - There is no exception to handle failed login due to no activation
+- Information about status of users (enabled or not) is not displayed properly in manage users view
+
