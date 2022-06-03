@@ -8,7 +8,7 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Dzięki za zalogowanie jako admin</h2>
+    <h2>You are logged as an admin now.</h2>
 </section>
 
 <jsp:include page="../../footer.jsp"/>

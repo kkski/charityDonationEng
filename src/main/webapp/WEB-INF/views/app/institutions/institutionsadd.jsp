@@ -7,18 +7,18 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Dodaj organizację</h2>
+    <h2>Add institution</h2>
     <form:form method="POST" modelAttribute="institution" class="form-signin">
         <spring:bind path="name">
             <div class="form-group">
-                <p class="title">Nazwa instytucji:</p>
+                <p class="title">Name of institution:</p>
                 <form:input type="text" name="name" placeholder="Nazwa organizacji" path="name"/>
                 <p class="subtitle"><form:errors path="name"/></p>
             </div>
         </spring:bind>
         <spring:bind path="description">
             <div class="form-group">
-                <p class="title">Opis instytucji:</p>
+                <p class="title">Description:</p>
                 <form:input type="text" name="description" placeholder="Opis działalności" path="description" class="title"/>
                 <p class="subtitle"><form:errors path="description"/></p>
             </div>
@@ -26,7 +26,7 @@
 
 
         <div class="form-group form-group--buttons">
-            <button class="btn" type="submit">Dodaj instytucję</button>
+            <button class="btn" type="submit">Add an institution</button>
         </div>
     </form:form>
 </section>

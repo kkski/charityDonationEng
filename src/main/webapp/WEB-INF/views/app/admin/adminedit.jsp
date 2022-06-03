@@ -8,7 +8,7 @@
 
 <section class="login-page">
 
-    <h2>Edytuj administratora</h2>
+    <h2>Edit admin info</h2>
 
     <jsp:include page="../../formuser.jsp"/>
     </section>

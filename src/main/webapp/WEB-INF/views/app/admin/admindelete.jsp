@@ -7,12 +7,12 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Usuń admina</h2>
+    <h2>Delete an admin</h2>
     <div class="col">
-        <div class="title">Nazwa użytkownika: ${adminToDelete.username}</div>
+        <div class="title">Username: ${adminToDelete.username}</div>
         <div class="subtitle">Email: ${adminToDelete.email}</div>
     </div>
-    <a href="/admin/admins/delete/${adminToDelete.id}/confirm">Potwierdź usunięcie</a>
+    <a href="/admin/admins/delete/${adminToDelete.id}/confirm">Confirm removal</a>
 </section>
 
 

@@ -6,8 +6,8 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <jsp:include page="../../headerloggedin.jsp"/>
 <section class="help">
-    <h2>Zarządzaj administratorami</h2>
-    <h3><a href="/admin/admins/add">Dodaj nowego administratora</a></h3>
+    <h2>Manage admins</h2>
+    <h3><a href="/admin/admins/add">Add a new admin</a></h3>
     <div class="help--slides active">
         <ul class="help--slides-items">
             <c:forEach items="${admins}" var = "i" begin = "0" end = "10" varStatus="loop">
@@ -15,7 +15,7 @@
                 <div class="col">
                     <div class="title">${i.username}</div>
                     <div class="subtitle">${i.email}</div>
-                    <div class="subtitle"><a href="/admin/admins/edit/${i.id}">Edytuj</a> <a href="/admin/admins/delete/${i.id}">Usuń</a></div>
+                    <div class="subtitle"><a href="/admin/admins/edit/${i.id}">Edit</a> <a href="/admin/admins/delete/${i.id}">Delete</a></div>
 
                 </div>
                 <c:if test="${loop.index + 1 % 2 == 0}"></li></c:if>

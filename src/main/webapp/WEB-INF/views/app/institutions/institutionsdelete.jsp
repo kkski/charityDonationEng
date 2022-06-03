@@ -7,12 +7,12 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Usuń organizację</h2>
+    <h2>Delete institution</h2>
 
-    <h3>Nazwa instytucji: ${institutionToDelete.name}</h3>
-    <h3>Opis instytucji: ${institutionToDelete.description}</h3>
+    <h3>Name of institution: ${institutionToDelete.name}</h3>
+    <h3>Description of institution: ${institutionToDelete.description}</h3>
     </div>
-    <a href="/admin/institutions/delete/${institutionToDelete.id}/confirm">Potwierdź usunięcie</a>
+    <a href="/admin/institutions/delete/${institutionToDelete.id}/confirm">Confirm removal</a>
 </section>
 
 

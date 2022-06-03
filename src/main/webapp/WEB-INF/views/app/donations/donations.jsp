@@ -6,22 +6,22 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <jsp:include page="../../headerloggedin.jsp"/>
 <section class="help">
-    <h2>Zarządzaj donacjami</h2>
+    <h2>Manage donations</h2>
     <div class="help--slides active">
         <table>
             <tbody>
             <tr>
-                <td>Ilość</td>
-                <td>Kategorie:</td>
-                <td>Organizacja:</td>
-                <td>Ulica:</td>
-                <td>Miasto:</td>
-                <td>Kod pocztowy:</td>
-                <td>Data odbioru:</td>
-                <td>Godzina odbioru:</td>
-                <td>Komentarz:</td>
+                <td>Quantity</td>
+                <td>Categories:</td>
+                <td>Organisation:</td>
+                <td>Street:</td>
+                <td>City:</td>
+                <td>Zip code:</td>
+                <td>Pickup date:</td>
+                <td>Pickup time:</td>
+                <td>Comment:</td>
                 <td>Status:</td>
-                <td>Data potwierdzenia:</td>
+                <td>Confirm date:</td>
             </tr>
             <c:forEach items="${donations}" var="donation">
                 <tr>
@@ -36,7 +36,7 @@
                 <td>${donation.pickUpComment}</td>
                 <td>${donation.status.pickedUp}</td>
                 <td>${donation.status.clickMoment}</td>
-                <td><a href="/app/donations/${donation.id}">Szczegóły</a></td>
+                <td><a href="/app/donations/${donation.id}">Details</a></td>
                 </tr>
             </c:forEach>
             </tbody>

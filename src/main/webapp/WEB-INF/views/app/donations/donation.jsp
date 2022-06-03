@@ -6,13 +6,13 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <jsp:include page="../../headerloggedin.jsp"/>
 <section class="help">
-    <h2>Szczegóły Twojej darowizny</h2>
+    <h2>Donation details</h2>
     <div class="summary">
         <div class="form-section">
-            <h4>Oddajesz:</h4>
+            <h4>Your donation contains:</h4>
             <ul>
                 <li>
-                   ${donation.quantity} worków z kategorii
+                   ${donation.quantity} bags of
 
                        ${donation.categoriesNames}.
 
@@ -20,14 +20,14 @@
                 </li>
 
                 <li>
-                    Dla fundacji ${donation.institution.name}.
+                    For organisation ${donation.institution.name}.
                 </li>
             </ul>
         </div>
 
         <div class="form-section form-section--columns">
             <div class="form-section--column">
-                <h4>Adres odbioru:</h4>
+                <h4>Pickup address:</h4>
                 <ul>
                     ${donation.street}
                         ${donation.city}
@@ -36,29 +36,29 @@
             </div>
 
             <div class="form-section--column">
-                <h4>Termin odbioru:</h4>
+                <h4>Pickup moment:</h4>
                 <ul>
                     <li>
-                    Data: ${donation.pickUpDate}
+                    Date: ${donation.pickUpDate}
                     </li><li>
-                        Godzina:${donation.pickUpTime}
+                        Time:${donation.pickUpTime}
                 </li><li>
-                    Komentarz:${donation.pickUpComment}
+                    Comment:${donation.pickUpComment}
                 </li>
                 </ul>
             </div>
 
             <div class="form-section--column">
-                <h4>Potwierdzenie:</h4>
+                <h4>Confirmation:</h4>
                 <ul>
                     <li>
-                        Data i czas: ${status.clickMoment}
+                        Date and time: ${status.clickMoment}
                      </li>
                     <li>
-                    Zatwierdzono: ${status.pickedUp}
+                    Confirmed: ${status.pickedUp}
                      </li>
                     <li>
-                        <a href="/app/donations/${donation.id}/approve">Zatwierdź</a>
+                        <a href="/app/donations/${donation.id}/approve">Confirm</a>
                     </li>
                 </ul>
             </div>
