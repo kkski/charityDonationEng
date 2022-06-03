@@ -11,7 +11,7 @@
     <spring:bind path="username">
 
         <div class="form-group">
-            <p class="title">Nazwa użytkownika:</p>
+            <p class="title">Username:</p>
             <form:input type="text" name="username" path="username"/>
             <p class="subtitle"><form:errors path="username"/></p>
         </div>
@@ -20,7 +20,7 @@
     <spring:bind path="firstName">
 
         <div class="form-group">
-            <p class="title">Imię:</p>
+            <p class="title">First name:</p>
             <form:input type="text" name="firstName" path="firstName"/>
             <p class="subtitle"><form:errors path="firstName"/></p>
         </div>
@@ -29,7 +29,7 @@
     <spring:bind path="lastName">
 
         <div class="form-group">
-            <p class="title">Nazwisko:</p>
+            <p class="title">Last name:</p>
             <form:input type="lastName" name="lastName" path="lastName"/>
             <p class="subtitle"><form:errors path="lastName"/></p>
         </div>
@@ -45,14 +45,14 @@
 
     <spring:bind path="password">
         <div class="form-group">
-            <p class="title">Hasło:</p>
+            <p class="title">Password:</p>
             <form:input type="password" name="password" path="password"/>
             <p class="subtitle"><form:errors path="password"/></p>
         </div>
     </spring:bind>
     <spring:bind path="password2">
     <div class="form-group">
-        <p class="title">Potwierdź hasło:</p>
+        <p class="title">Confirm password:</p>
         <form:input type="password" name="password2" path="password2"/>
         <p class="subtitle"><form:errors path="password2"/></p>
 
@@ -60,6 +60,6 @@
     </spring:bind>
 
     <div class="form-group form-group--buttons">
-        <button class="btn" type="submit">Wykonaj</button>
+        <button class="btn" type="submit">Submit</button>
     </div>
 </form:form>

@@ -6,7 +6,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <jsp:include page="headerloggedin.jsp"/>
 <section class="login-page">
-    <h2>Dzięki za zalogowanie! Możesz teraz dodać donację.</h2>
+    <h2>Thank you for logging in! You can manage your donations now.</h2>
 </section>
 
 <jsp:include page="footer.jsp"/>

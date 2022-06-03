@@ -8,8 +8,8 @@
 <%@ include file="header.jsp" %>
 
     <section class="login-page">
-      <h2>Konto stworzone!</h2>
-      Aktywuj konto przez link wysłany w wiadomości e-mail, a następnie zaloguj się.
+      <h2>Account created!</h2>
+      Activate your account using link provided in e-mail we just sent you!
     </section>
 
 <%@ include file="footer.jsp" %>

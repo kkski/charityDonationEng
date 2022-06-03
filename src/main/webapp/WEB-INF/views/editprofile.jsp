@@ -9,7 +9,7 @@
 
 <section class="login-page">
 
-    <h2>Edytuj swój profil</h2>
+    <h2>Edit your profile</h2>
 
     <form:form method="POST" modelAttribute="userForm" class="form-signin">
 

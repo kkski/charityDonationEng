@@ -18,11 +18,11 @@
     <nav class="container container--70">
         <ul class="nav--actions">
             <li class="logged-user">
-                Witaj ${user.firstName}
+                Hello ${user.firstName}
                 <ul class="dropdown">
-                    <li><a href="/app/profile/edit">Edytuj profil</a></li>
+                    <li><a href="/app/profile/edit">Edit profile</a></li>
                     <li><form action="<c:url value="/"/>" method="post">
-                        <input type="submit" value="Wyloguj">
+                        <input type="submit" value="Logout">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </form></li>
                 </ul>
@@ -32,14 +32,14 @@
         <ul>
             <li><a href="/app" class="btn btn--without-border active">Start</a></li>
             <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
-                <li><a href="/app/donations/donation" class="btn btn--without-border">Przekaż dary</a></li>
-                <li><a href="/app/donations" class="btn btn--without-border">Zarządzaj darami</a></li>
+                <li><a href="/app/donations/donation" class="btn btn--without-border">Make a donation</a></li>
+                <li><a href="/app/donations" class="btn btn--without-border">Manage donations</a></li>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <li><a href="/admin/institutions" class="btn btn--without-border">Fundacje i organizacje</a></li>
-                <li><a href="/admin/admins" class="btn btn--without-border">Zarządzaj administratorami</a></li>
-                <li><a href="/admin/users" class="btn btn--without-border">Zarządzaj użytkownikami</a></li>
+                <li><a href="/admin/institutions" class="btn btn--without-border">Foundations and organisations</a></li>
+                <li><a href="/admin/admins" class="btn btn--without-border">Manage admins</a></li>
+                <li><a href="/admin/users" class="btn btn--without-border">Manage users</a></li>
             </sec:authorize>
-            <li><a href="index.html#contact" class="btn btn--without-border">Kontakt</a></li>
+            <li><a href="index.html#contact" class="btn btn--without-border">Contact</a></li>
         </ul>    </nav>
 </header>
