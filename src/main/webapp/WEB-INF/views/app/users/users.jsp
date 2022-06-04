@@ -6,8 +6,8 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <jsp:include page="../../headerloggedin.jsp"/>
 <section class="help">
-    <h2>Zarządzaj użytkownikami</h2>
-    <h3><a href="/admin/users/add">Dodaj nowego użytkownika</a></h3>
+    <h2>Manage users</h2>
+    <h3><a href="/admin/users/add">Add a new user</a></h3>
     <div class="help--slides active">
         <ul class="help--slides-items">
             <c:forEach items="${users}" var = "i" begin = "0" end = "10" varStatus="loop">
@@ -16,9 +16,9 @@
                     <div class="title">${i.username}</div>
                     <div class="subtitle">${i.email}</div>
 
-                    <div class="subtitle"><c:if test="${i.enabled == 0}">Zablokowano, <a href="/admin/users/unblock/${i.id}">Odblokuj</a></c:if>
-                        <c:if test="${i.enabled == 1}"><a href="/admin/users/block/${i.id}">Zablokuj</a></c:if>
-                         <a href="/admin/users/edit/${i.id}">Edytuj</a> <a href="/admin/users/delete/${i.id}">Usuń</a></div>
+                    <div class="subtitle"><c:if test="${i.enabled == 0}">Blocked, <a href="/admin/users/unblock/${i.id}">Unblock</a></c:if>
+                        <c:if test="${i.enabled == 1}"><a href="/admin/users/block/${i.id}">Block</a></c:if>
+                         <a href="/admin/users/edit/${i.id}">Edit</a> <a href="/admin/users/delete/${i.id}">Delete</a></div>
 
                 </div>
                 <c:if test="${loop.index + 1 % 2 == 0}"></li></c:if>

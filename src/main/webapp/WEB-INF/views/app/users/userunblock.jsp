@@ -7,12 +7,12 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Odblokuj użytkownika</h2>
+    <h2>Unblock user</h2>
     <div class="col">
-        <div class="title">Nazwa użytkownika: ${userToUnblock.username}</div>
+        <div class="title">Username: ${userToUnblock.username}</div>
         <div class="subtitle">Email: ${userToUnblock.email}</div>
     </div>
-    <a href="/admin/users/unblock/${userToUnblock.id}/confirm">Potwierdź odblokowanie</a>
+    <a href="/admin/users/unblock/${userToUnblock.id}/confirm">Confirm unblock</a>
 </section>
 
 

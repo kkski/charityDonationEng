@@ -7,12 +7,12 @@
 <jsp:include page="../../headerloggedin.jsp"/>
 
 <section class="login-page">
-    <h2>Zablokuj użytkownika</h2>
+    <h2>Block an user</h2>
     <div class="col">
-        <div class="title">Nazwa użytkownika: ${userToBlock.username}</div>
+        <div class="title">Username: ${userToBlock.username}</div>
         <div class="subtitle">Email: ${userToBlock.email}</div>
     </div>
-    <a href="/admin/users/block/${userToBlock.id}/confirm">Potwierdź zablokowanie</a>
+    <a href="/admin/users/block/${userToBlock.id}/confirm">Confirm blocking</a>
 </section>
 
 

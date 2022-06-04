@@ -8,7 +8,7 @@
 
 <section class="login-page">
 
-    <h2>Edytuj użytkownika</h2>
+    <h2>Edit user</h2>
     <jsp:include page="../../formuser.jsp"/>
 </section>
 
