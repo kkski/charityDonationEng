@@ -6,15 +6,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pl.coderslab.charity.model.User;
-import pl.coderslab.charity.model.UserDto;
+import pl.coderslab.charity.model.*;
+import pl.coderslab.charity.repositories.CategoryRepository;
+import pl.coderslab.charity.repositories.DonationRepository;
 import pl.coderslab.charity.repositories.InstitutionRepository;
 import pl.coderslab.charity.repositories.UserRepository;
 import pl.coderslab.charity.services.CurrentUser;
+import pl.coderslab.charity.services.DonationService;
 import pl.coderslab.charity.services.UserService;
 import pl.coderslab.charity.services.ValidationService;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
@@ -25,12 +29,20 @@ public class AppController {
     private final InstitutionRepository institutionRepository;
     private final UserRepository userRepository;
     private final ValidationService validationService;
+    private final CategoryRepository categoryRepository;
 
-    public AppController(UserService userService, InstitutionRepository institutionRepository, UserRepository userRepository, ValidationService validationService) {
+    private final DonationRepository donationRepository;
+
+    private final DonationService donationService;
+
+    public AppController(UserService userService, InstitutionRepository institutionRepository, UserRepository userRepository, ValidationService validationService, CategoryRepository categoryRepository, DonationRepository donationRepository, DonationService donationService) {
         this.userService = userService;
         this.institutionRepository = institutionRepository;
         this.userRepository = userRepository;
         this.validationService = validationService;
+        this.categoryRepository = categoryRepository;
+        this.donationRepository = donationRepository;
+        this.donationService = donationService;
     }
 
     @ModelAttribute
@@ -77,7 +89,8 @@ public class AppController {
 
 
         userService.updateLoggedUser(loggedUser.getId(), userForm);
-        return "redirect:/app";
+        return "redirect:/";
     }
+
 
 }

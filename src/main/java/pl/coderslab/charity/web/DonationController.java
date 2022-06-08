@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/app/donations")
 @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
+@RequestMapping("/app")
 public class DonationController {
     private final InstitutionRepository institutionRepository;
     private final CategoryRepository categoryRepository;
@@ -40,21 +40,25 @@ public class DonationController {
     }
 
     @ModelAttribute
-    public void init(Model model,
-                     @AuthenticationPrincipal CurrentUser customUser) {
+    public void init(Model model
+
+//            ,
+//                     @AuthenticationPrincipal CurrentUser customUser
+
+    ) {
         model.addAttribute("categories", categoryRepository.findAll());
         model.addAttribute("institutions", institutionRepository.findAll());
 
-        User entityUser = customUser.getUser();
-
-        User myUser = userService.findByUsername(entityUser.getUsername());
-
-        model.addAttribute("user", myUser);
+//        User entityUser = customUser.getUser();
+//
+//        User myUser = userService.findByUsername(entityUser.getUsername());
+//
+//        model.addAttribute("user", myUser);
 
     }
 
 
-    @GetMapping("")
+    @GetMapping("/donations")
     public String showDonations(Model model, @AuthenticationPrincipal CurrentUser customUser) {
         User loggedUser = customUser.getUser();
 
@@ -64,31 +68,23 @@ public class DonationController {
 
 
 
-    @GetMapping("/donation")
-    public String donateAction(Model model,
-                               @Valid @ModelAttribute("donation") Donation donation,
-                               BindingResult bindingResult) {
-
-        if (categoryRepository.findAll().size() == 0) {
-            List<Category> emptyCategories = new ArrayList<>();
-            model.addAttribute("donation", new Donation());
-            model.addAttribute("categories", emptyCategories);
-            return "app/donations/donationform";
-        }
+    @GetMapping("/donations/donate")
+    public String donateAction(Model model)
+    {
 
         model.addAttribute("donation", new Donation());
 
         return "app/donations/donationform";
     }
 
-    @PostMapping("/donation")
+    @PostMapping("/donations/donate")
     public String addDonation(
             @Valid @ModelAttribute("donation") Donation donation,
             BindingResult bindingResult,
             @AuthenticationPrincipal CurrentUser customUser
     ) {
         if (bindingResult.hasErrors()) {
-            return "form";
+            return "app/donations/donationform";
         }
         User entityUser = customUser.getUser();
         Donation myDonation = new Donation();
@@ -108,7 +104,7 @@ public class DonationController {
         myDonation.setStatus(status);
         donationRepository.save(myDonation);
 
-        return "redirect:/app";
+        return "redirect:";
 
     }
 }

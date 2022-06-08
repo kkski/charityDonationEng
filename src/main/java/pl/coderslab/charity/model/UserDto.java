@@ -17,7 +17,7 @@ public class UserDto {
     private String lastName;
     @NotBlank(message = "Wartość nie może być pusta")
     private String email;
-//    @NotBlank(message = "Wartość nie może być pusta")
+//  custom validated
     private String oldPassword;
     @NotBlank(message = "Wartość nie może być pusta")
     private String password;

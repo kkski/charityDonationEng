@@ -13,6 +13,17 @@
 
     <form:form method="POST" modelAttribute="userForm" class="form-signin">
 
+
+        <spring:bind path="username">
+
+            <div class="form-group">
+                <p class="title">Username:</p>
+                <form:input type="text" name="username" path="username"/>
+                <p class="subtitle"><form:errors path="username"/></p>
+            </div>
+        </spring:bind>
+
+
         <spring:bind path="firstName">
 
             <div class="form-group">
@@ -39,7 +50,7 @@
             </div>
         </spring:bind>
 
-        <sec:authorize access="hasRole('ROLE_USER')">
+        <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
             <div class="form-group">
                 <p class="title">Stare hasło:</p>
                 <form:input type="password" name="oldPassword" path="oldPassword"/>

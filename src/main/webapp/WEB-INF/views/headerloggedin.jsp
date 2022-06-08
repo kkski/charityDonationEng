@@ -20,7 +20,7 @@
             <li class="logged-user">
                 Hello ${user.firstName}
                 <ul class="dropdown">
-                    <li><a href="/app/profile/edit">Edit profile</a></li>
+                    <li><a href="/profile/edit">Edit profile</a></li>
                     <li><form action="<c:url value="/"/>" method="post">
                         <input type="submit" value="Logout">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -30,9 +30,9 @@
         </ul>
 
         <ul>
-            <li><a href="/app" class="btn btn--without-border active">Start</a></li>
+            <li><a href="" class="btn btn--without-border active">Start</a></li>
             <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
-                <li><a href="/app/donations/donation" class="btn btn--without-border">Make a donation</a></li>
+                <li><a href="/app/donations/donate" class="btn btn--without-border">Make a donation</a></li>
                 <li><a href="/app/donations" class="btn btn--without-border">Manage donations</a></li>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_ADMIN')">

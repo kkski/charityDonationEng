@@ -1,6 +1,7 @@
 package pl.coderslab.charity.web;
 
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import pl.coderslab.charity.services.UserService;
 import javax.validation.Valid;
 @Controller
 @RequestMapping("/admin/institutions")
+@PreAuthorize("hasRole('ROLE_ADMIN')")
 public class InstitutionsController {
 
     private final UserService userService;

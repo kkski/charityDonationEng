@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation
         .web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import pl.coderslab.charity.services.SpringDataUserDetailsService;
 
@@ -19,8 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/").permitAll()
-                .antMatchers("/donation").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/app/**").hasRole("USER")
+                .antMatchers("/app/**").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .and().formLogin()
                 .loginPage("/login")
@@ -39,6 +39,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+
+    @Bean
+    public BCrypt bcrypt() {return new BCrypt();}
+
 
     @Bean
     public SpringDataUserDetailsService customUserDetailsService() {
