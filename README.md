@@ -2,6 +2,8 @@
 
 It is an implementation of UX project created by Magda, a talented student of CodersLab.
 
+App helps donators connect with trusted charity organisations.
+
 It is built using several Spring technologies, JS, JSP and is based on MySQL database.
 
 To start it you need everything that you normally need while working with Spring, MySQL databases and Tomcat.
