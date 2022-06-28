@@ -1,6 +1,8 @@
 # charityDonationEng
 
-It is an app built using several Spring technologies, JS, JSP and is based on MySQL database.
+It is an implementation of UX project created by talented student of CodersLab, a bootcamp I attended.
+
+It is built using several Spring technologies, JS, JSP and is based on MySQL database.
 
 To start it you need everything that you normally need while working with Spring, MySQL databases and Tomcat.
 
