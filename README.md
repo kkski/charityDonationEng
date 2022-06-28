@@ -1,6 +1,6 @@
 # charityDonationEng
 
-It is an implementation of UX project created by talented student of CodersLab, a bootcamp I attended.
+It is an implementation of UX project created by Magda, a talented student of CodersLab.
 
 It is built using several Spring technologies, JS, JSP and is based on MySQL database.
 
